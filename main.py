@@ -13,7 +13,7 @@ with col1:
 with col2:
     st.title("Emmanuel Herrera")
     content = """
-    Hi, my name is Emmanuel Herrera, an engineer passionate 
+    Hi, my name is Emmanuel Herrera, I'am an engineer passionate 
     about advanced data analytics and visualization techniques, committed 
     to mastering all aspects of data.  I love learning new techniques and 
     advanced data analytics tools to put them into practice in different
@@ -28,14 +28,20 @@ Below you can find some of the apps I have built in Python. Feel free to contact
 """
 st.write(content2)
 
-col3, col4 = st.columns(2)
+col3, space_col, col4 = st.columns([1.5, 0.5, 1.5])
 
 df = pd.read_csv("data.csv", sep=";")
 
 with col3:
     for idx, row in df[:10].iterrows():
         st.title(row["title"])
+        st.write(row["description"])
+        st.image("images/" + row["image"])
+        st.write(f"[Source Code]({row['url']})")
 
 with col4:
     for idx, row in df[10:].iterrows():
         st.title(row["title"])
+        st.write(row["description"])
+        st.image("images/" + row["image"])
+        st.write(f"[Source Code]({row['url']})")
