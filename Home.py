@@ -26,7 +26,7 @@ with col2:
 content2 = """
 Below you can find some of the apps I have built in Python. Feel free to contact me!
 """
-st.write(content2)
+st.subheader(content2)
 
 col3, space_col, col4 = st.columns([1.5, 0.5, 1.5])
 
