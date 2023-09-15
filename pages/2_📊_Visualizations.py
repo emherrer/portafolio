@@ -8,7 +8,7 @@ st.set_page_config(page_title="Contact Me",
 
 st.title("From Data to Viz")
 
-pbi = f"[Power BI]({'https://www.data-to-viz.com'})"
+pbi = f"[Power BI]({'https://github.com/emherrer/portafolio/blob/main/data/PBI_report_sample.pdf'})"
 
 viz = f"""
 Welcome to my portfolio of data visualizations created with R and Python. 
